@@ -21,7 +21,7 @@ class vector{
             T* temp = new T[curr_size*2];
 
             for(int i=0;i<curr_size;i++){
-            temp[i] = arr[i];
+                temp[i] = arr[i];
             }
 
             T* temp2 = arr;

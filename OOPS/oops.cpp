@@ -78,6 +78,6 @@ int main(){
     // Satyam.setpin(9890);
     Human Satyam("satyam",21,887766);
     cout<<Satyam.name<<" "<<Satyam.age<<" "<<Satyam.phone<<" "<<endl;
-
+    
     return 0;
 }

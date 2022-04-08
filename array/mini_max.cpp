@@ -1,16 +1,17 @@
 #include<iostream>
 using namespace std;
 int min_max(int *arr, int s){
-if(s==0){
-    return arr[s];
-}
-int min = min_max(arr,s-1);
-if(min<arr[s]){
-    return min;
-}
-else{
-    return arr[s];
-}
+   
+    if(s==0){
+        return arr[s];
+    }
+    int min = min_max(arr,s-1);
+    if(min<arr[s]){
+        return min;
+    }
+    else{
+        return arr[s];
+    }
 
 }
 

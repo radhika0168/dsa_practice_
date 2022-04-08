@@ -1,16 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void subset(int* arr, int n){
-    vector<int> v;
-    if(n==0){
-        return v;
+void generate_sub(char *in, char *out, int i, int j){
+    if(in[i]== '\0'){
+        out[j]= '\0';
+        cout<<out<<"\n";                 
+        return;                          
     }
-    
+
+     out[j] = in[i];
+     generate_sub(in,out,i+1,j+1);
+     generate_sub(in,out,i+1,j);
 }
+
 int main(){
-    int arr[] = {1,2,3};
-    int size = sizeof(arr)/sizeof(int);
-    subset(arr,size);
+    char input[] = "abc";
+    char output[10];
+    generate_sub(input,output,0,0)
     return 0;
 }
